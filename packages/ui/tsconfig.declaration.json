@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": ".",
+    "emitDeclarationOnly": true,
+    "preserveSymlinks": true
+  },
+  "include": ["es/**/*", "lib/**/*"],
+  "exclude": [
+    "env.d.ts",
+    "node_modules",
+    "**/test/**/*",
+    "**/demo/**/*",
+    "**/vue-lazyload/*",
+    "**/date-picker/*",
+    "**/popover/*",
+    "**/stories/*"
+  ]
+}

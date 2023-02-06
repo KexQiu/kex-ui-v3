@@ -1,0 +1,63 @@
+@use 'sass:map';
+@use './theme/default' as *;
+
+$font-family: var(--k-base-font);
+
+$font-size-xs: var(--k-font-size-xs);
+$font-size-sm: var(--k-font-size-sm);
+$font-size-md: var(--k-font-size-md);
+$font-size-lg: var(--k-font-size-lg);
+$font-size-xl: var(--k-font-size-xl);
+$font-size-xxl: var(--k-font-size-xxl);
+$font-size-primary: $font-size-md;
+
+$font-line-height-xs: var(--k-line-height-xs);
+$font-line-height-sm: var(--k-line-height-sm);
+$font-line-height-md: var(--k-line-height-md);
+$font-line-height-lg: var(--k-line-height-lg);
+
+$font-weight-bold: var(--k-font-bold);
+
+$primary-color: var(--k-primary-color);
+$success-color: var(--k-success-color);
+$warning-color: var(--k-warning-color);
+$danger-color: var(--k-danger-color);
+
+$black: var(--k-black);
+$white: var(--k-white);
+
+$body-bg-color: var(--k-background-color);
+
+$border-radius-sm: var(--k-radius-sm);
+$border-radius-md: var(--k-radius-md);
+$border-radius-lg: var(--k-radius-lg);
+$border-radius-max: var(--k-radius-max);
+
+$border-line-color: var(--k-bg-color);
+
+$mask-bg-color: var(--k-mask-background-color);
+
+$border-shadow-color: var(--k-shadow-color);
+$shadow: 0 0 8px $border-shadow-color;
+
+$padding-base: var(--k-padding-base);
+$padding-xs: var(--k-padding-xs);
+$padding-sm: var(--k-padding-sm);
+$padding-md: var(--k-padding-md);
+$padding-lg: var(--k-padding-lg);
+$padding-xl: var(--k-padding-xl);
+$padding-5: 5px;
+$padding-10: 10px;
+$padding-14: 14px;
+
+$zIndex-normal: var(--k-zindex-normal);
+$zIndex-backToTop: var(--k-zindex-backtotop);
+$zIndex-tooltip: var(--k-zindex-tooltip);
+$zIndex-popup: var(--k-zindex-popup);
+$zIndex-dialog: var(--k-zindex-dialog);
+$zIndex-previewer: var(--k-zindex-previewer);
+$zIndex-toast: var(--k-zindex-toast);
+
+$bezier: cubic-bezier(0.4, 0, 0.2, 1);
+$bezier-ease-out: cubic-bezier(0, 0, 0.2, 1);
+$disabled-opacity: 0.7;

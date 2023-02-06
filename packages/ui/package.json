@@ -1,0 +1,26 @@
+{
+  "name": "kex-ui-v3",
+  "version": "1.0.0",
+  "description": "kex-ui-v3",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "file": [
+    "lib",
+    "es"
+  ],
+  "keywords": [
+    "kex-ui-v3",
+    "vue3组件库"
+  ],
+  "author": "kex",
+  "license": "MIT",
+  "dependencies": {
+    "@kex-ui-v3/utils": "workspace:^1.0.0",
+    "@popperjs/core": "^2.11.6",
+    "@vueuse/core": "^9.12.0"
+  },
+  "typing": "lib/index.d.ts"
+}

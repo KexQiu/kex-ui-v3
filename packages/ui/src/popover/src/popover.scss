@@ -1,0 +1,133 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../../style/config' as *;
+@use '../../style/variables' as *;
+@use '../../style/function' as *;
+@use '../../style/mixins' as *;
+
+$popover: () !default;
+$popover: map.deep-merge(
+  (
+    'background-color': rgba(#ffffff, 1),
+    'border-radius': 6px,
+    'padding': 5px,
+    'color': #000000,
+    'box-shadow': 0 4px 10px -2px rgba(0, 0, 0, 0.05),
+  ),
+  $popover
+);
+
+@include b('popover') {
+  width: fit-content;
+  height: auto;
+
+  @include e('trigger') {
+    height: auto;
+    width: fit-content;
+  }
+}
+
+.k-popover__content {
+  position: absolute;
+  border-radius: map.get($popover, 'border-radius');
+  color: map.get($popover, 'color');
+  background-color: map.get($popover, 'background-color');
+  //box-shadow: map.get($popover, 'box-shadow');
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10000;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.05));
+
+  @include e(scroll-view) {
+    padding: map.get($popover, 'padding');
+  }
+
+  @include when(hidden) {
+    // visibility: hidden;
+    animation: k-popover-hide 0.2s $bezier-ease-out;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  @include when(show) {
+    visibility: visible;
+    animation: k-popover-show 0.3s $bezier;
+    animation-fill-mode: forwards;
+  }
+}
+.k-popover__arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  visibility: hidden;
+
+  &::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    content: '';
+    transform: rotate(45deg);
+    visibility: visible;
+    background-color: map.get($popover, 'background-color');
+  }
+}
+
+.k-popover__content[data-popper-placement^='top'] > .k-popover__arrow {
+  bottom: -5px;
+  &::before {
+    bottom: 1px;
+  }
+}
+.k-popover__content[data-popper-placement^='bottom'] > .k-popover__arrow {
+  top: -5px;
+  &::before {
+    top: 1px;
+  }
+}
+.k-popover__content[data-popper-placement^='left'] > .k-popover__arrow {
+  right: -5px;
+  &::before {
+    right: 1px;
+  }
+}
+.k-popover__content[data-popper-placement^='right'] > .k-popover__arrow {
+  left: -5px;
+  &::before {
+    left: 1px;
+  }
+}
+
+@keyframes k-popover-show {
+  0% {
+    // transform: translate(
+    //   calc(getCssVar(popover, translateX) + getCssVar(popover, animateOffsetX)),
+    //   calc(getCssVar(popover, translateY) + getCssVar(popover, animateOffsetY))
+    // );
+    opacity: 0;
+  }
+  100% {
+    // transform: translate(
+    //   getCssVar(popover, translateX),
+    //   getCssVar(popover, translateY)
+    // );
+    opacity: 1;
+  }
+}
+
+@keyframes k-popover-hide {
+  0% {
+    // transform: translate(
+    //   getCssVar(popover, translateX),
+    //   getCssVar(popover, translateY)
+    // );
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    // transform: translate(
+    //   calc(getCssVar(popover, translateX) + getCssVar(popover, animateOffsetX)),
+    //   calc(getCssVar(popover, translateY) + getCssVar(popover, animateOffsetY))
+    // );
+    opacity: 0;
+    visibility: hidden;
+  }
+}

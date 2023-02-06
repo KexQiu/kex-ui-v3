@@ -1,0 +1,110 @@
+:root {
+  // Color
+  --k-black: #000;
+  --k-black-2: #333;
+  --k-black-3: #666;
+  --k-white: #fff;
+  --k-red: #ee0a24;
+  --k-red-2:#ff3030;
+  --k-blue: #1989fa;
+  --k-orange: #f88b2d;
+  --k-orange-dark: #ed6a0c;
+  --k-orange-light: #fffbe8;
+  --k-orange-shadow: #ff7600;
+  --k-green: #07c160;
+  --k-gray-1: #f7f8fa;
+  --k-gray-2: #f2f3f5;
+  --k-gray-3: #ebedf0;
+  --k-gray-4: #dcdee0;
+  --k-gray-5: #c8c9cc;
+  --k-gray-6: #969799;
+  --k-gray-7: #646566;
+  --k-gray-8: #323233;
+  --k-gray-9: #606266;
+  --k-gray-10: #aaaaaa;
+
+  // 按钮主色，文本色
+  --k-primary-color: var(--k-orange);
+  --k-success-color: var(--k-green);
+  --k-danger-color: var(--k-red);
+  --k-warning-color: var(--k-orange);
+  --k-info-color: var(--k-blue);
+
+  --k-text-color: var(--k-gray-8); // 黑色强调
+  --k-text-color-2: var(--k-gray-7); // 常规
+  --k-text-color-3: var(--k-gray-6); // 次要
+  --k-text-color-3: var(--k-gray-5); // 站位/说明
+  --k-text-color-4: var(--k-gray-4);
+  --k-text-color-5: var(--k-gray-3);
+
+  --k-link-color: #576b95;
+  --k-active-color: var(--k-gray-2);
+  --k-active-opacity: 0.6;
+  --k-disabled-opacity: 0.5;
+
+  // Gradient Colors
+  --k-gradient-orange: linear-gradient(90deg, #ffd9a0 -2.78%, #fe8319 100%);
+  --k-gradient-black: linear-gradient(271.81deg, #0c0a08 0%, #635e5e 100%);
+
+  // background color
+  --k-background-color: #f7f8f8;
+  --k-background: var(--k-gray-1);
+  --k-background-2: var(--k-white);
+  --k-background-gradient: linear-gradient(
+    90deg,
+    #ffd9a0 -2.78%,
+    #fe8319 100%
+  );
+
+  // 分割线
+  --k-border-line-color: #f9f9f9;
+
+  // 阴影
+  --k-shadow-color: rgba(102, 102, 102, 0.05);
+
+  // 遮罩背景统一使用这个
+  --k-mask-background-color: rgba(0, 0, 0, 0.5);
+
+  // Padding
+  --k-padding-base: 4px;
+  --k-padding-xs: 8px;
+  --k-padding-sm: 12px;
+  --k-padding-md: 16px;
+  --k-padding-lg: 24px;
+  --k-padding-xl: 32px;
+
+  // Font
+  --k-font-bold: 700;
+  --k-font-size-xs: 10px;
+  --k-font-size-sm: 12px;
+  --k-font-size-md: 14px;
+  --k-font-size-lg: 16px;
+  --k-font-size-xl: 18px;
+  --k-font-size-xxl: 20px;
+  --k-line-height-xs: 14px;
+  --k-line-height-sm: 18px;
+  --k-line-height-md: 20px;
+  --k-line-height-lg: 22px;
+  --k-base-font: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB',
+    'Microsoft Yahei', sans-serif;
+  --k-number-font: avenir-heavy, 'PingFang SC', helvetica neue, arial,
+    sans-serif;
+
+  // Border
+  --k-border-color: var(--k-gray-3);
+  --k-border-width: 1px;
+  --k-radius-sm: 2px;
+  --k-radius-md: 4px;
+  --k-radius-lg: 8px;
+  --k-radius-max: 999px;
+
+  // zIndex
+  --k-zindex-normal: 0;
+  --k-zindex-backtotop: 1000;
+  --k-zindex-tooltip: 1200;
+  --k-zindex-popup: 1400;
+  --k-zindex-dialog: 1600;
+  --k-zindex-previewer: 1700;
+  --k-zindex-toast: 1800;
+}

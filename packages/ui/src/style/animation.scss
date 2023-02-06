@@ -1,0 +1,133 @@
+@keyframes k-slide-up-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes k-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes k-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes k-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes k-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes k-slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes k-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes k-slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes k-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes k-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes k-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.k-fade {
+  &-enter-active {
+    animation: var(--k-duration-base) k-fade-in both var(--k-ease-out);
+  }
+
+  &-leave-active {
+    animation: var(--k-duration-base) k-fade-out both var(--k-ease-in);
+  }
+}
+
+.k-slide-up {
+  &-enter-active {
+    animation: k-slide-up-enter var(--k-duration-base) both var(--k-ease-out);
+  }
+
+  &-leave-active {
+    animation: k-slide-up-leave var(--k-duration-base) both var(--k-ease-in);
+  }
+}
+
+.k-slide-down {
+  &-enter-active {
+    animation: k-slide-down-enter var(--k-duration-base) both
+      var(--k-ease-out);
+  }
+
+  &-leave-active {
+    animation: k-slide-down-leave var(--k-duration-base) both
+      var(--k-ease-in);
+  }
+}
+
+.k-slide-left {
+  &-enter-active {
+    animation: k-slide-left-enter var(--k-duration-base) both
+      var(--k-ease-out);
+  }
+
+  &-leave-active {
+    animation: k-slide-left-leave var(--k-duration-base) both
+      var(--k-ease-in);
+  }
+}
+
+.k-slide-right {
+  &-enter-active {
+    animation: k-slide-right-enter var(--k-duration-base) both
+      var(--k-ease-out);
+  }
+
+  &-leave-active {
+    animation: k-slide-right-leave var(--k-duration-base) both
+      var(--k-ease-in);
+  }
+}

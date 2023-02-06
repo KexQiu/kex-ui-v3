@@ -1,0 +1,1 @@
+export { SFCWithInstall } from './with-install';

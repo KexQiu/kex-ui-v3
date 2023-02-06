@@ -1,0 +1,55 @@
+@use '../config' as *;
+@use '../function' as *;
+
+@import 'text.scss';
+
+// BEM
+@mixin b($block) {
+  $B: $namespace + '-' + $block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin e($element) {
+  $E: $B + $element-separator + $element !global;
+
+  @at-root {
+    & {
+      .#{$E} {
+        @content;
+      }
+    }
+  }
+}
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin m($modifier) {
+  @at-root {
+    &.#{$B + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin set-css-var($name, $value) {
+  #{getCssVarName($name)}: $value;
+}
+
+@mixin map-css-var($name, $variables) {
+  @each $attribute, $value in $variables {
+    #{getCssVarName($name, $attribute)}: $value;
+  }
+}
